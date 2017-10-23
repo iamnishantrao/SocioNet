@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            
+            performSegue(withIdentifier: "FeedViewController", sender: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,34 +37,38 @@ class ViewController: UIViewController {
     // Email authentication using Firebase.
     @IBAction func logInButtonPressed(_ sender: Any) {
         
-//        if let email = emailTextField.text, let password = passwordTextField.text {
-//
-//            Auth.auth().signIn(withEmail: email, password: password, completion: { (user,error) in
-//
-//                if error == nil {
-//
-//                    print("RAO: Successfully authenticated using email.")
-//                    self.performSegue(withIdentifier: "FeedViewController", sender: nil)
-//
-//                } else {
-//
-//                    // Create new account if user is not registered already.
-//                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-//
-//                        if error != nil {
-//
-//                            print("RAO: Unable to authenticate using email for the first time.")
-//                        } else {
-//
-//                            print("RAO: Successfully authenticated using email for the first time.")
-//                            self.performSegue(withIdentifier: "FeedViewController", sender: nil)
-//                        }
-//                    })
-//                }
-//            })
-//        }
-        
-        self.performSegue(withIdentifier: "FeedViewController", sender: nil)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user,error) in
+
+                if error == nil {
+
+                    print("RAO: Successfully authenticated using email.")
+                    if let user = user{
+                        let userData = ["provider": user.providerID]
+                        self.keyChainSignIn(uid: user.uid, userData: userData)
+                    }
+                    
+                } else {
+
+                    // Create new account if user is not registered already.
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+
+                        if error != nil {
+
+                            print("RAO: Unable to authenticate using email for the first time.")
+                        } else {
+
+                            print("RAO: Successfully authenticated using email for the first time.")
+                            if let user = user {
+                                let userData = ["provider": user.providerID]
+                                self.keyChainSignIn(uid: user.uid, userData: userData)
+                            }
+                        }
+                    })
+                }
+            })
+        }
     }
     
     // Facebook authentication.
@@ -93,9 +105,24 @@ class ViewController: UIViewController {
             } else {
                 
                 print("RAO: Successfully authenticated using Firebase for Facebook.")
-                self.performSegue(withIdentifier: "FeedViewController", sender: nil)
+                
+                // To store UID in Keychain.
+                if let user = user{
+                    let userData = ["provider": credential.provider]
+                    self.keyChainSignIn(uid: user.uid, userData: userData)
+                }
             }
         })
     }
+    
+    // Function to add UID to Keychain.
+    func keyChainSignIn(uid: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: uid, userData: userData)
+        
+        KeychainWrapper.standard.set(uid, forKey: KEY_UID)
+        print("RAO: Data added to Keychain.")
+        performSegue(withIdentifier: "FeedViewController", sender: nil)
+    }
 }
+
 

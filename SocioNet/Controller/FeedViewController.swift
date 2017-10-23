@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class FeedViewController: UIViewController {
 
@@ -21,7 +23,11 @@ class FeedViewController: UIViewController {
 
     @IBAction func logOutPressed(_ sender: Any) {
         
+        _ = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        print("RAO: User ID removed from Key Chain.")
+        try! Auth.auth().signOut()
         self.performSegue(withIdentifier: "SignOut", sender: nil)
+        print("RAO: Successfully logged out!")
     }
 }
 

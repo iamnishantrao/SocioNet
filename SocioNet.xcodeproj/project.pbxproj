@@ -16,6 +16,8 @@
 		193C602F1F8152020003C7D0 /* Trench.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 193C602D1F81512E0003C7D0 /* Trench.ttf */; };
 		193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193FE4F11F83584000627726 /* CustomFeedImageView.swift */; };
 		19500F551F82AF76004181DA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19500F541F82AF76004181DA /* FeedViewController.swift */; };
+		19C52B3E1F9E36A400E189D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C52B3D1F9E36A400E189D0 /* DataService.swift */; };
+		19C52B401F9E5E0000E189D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C52B3F1F9E5E0000E189D0 /* Constants.swift */; };
 		19D7E6191F828683002E3455 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D7E6181F828683002E3455 /* CustomView.swift */; };
 		19D7E61B1F829C69002E3455 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D7E61A1F829C69002E3455 /* CustomImageView.swift */; };
 		19EB03791F8225B6004BCDA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 193C60371F8160380003C7D0 /* GoogleService-Info.plist */; };
@@ -35,6 +37,8 @@
 		193C60371F8160380003C7D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		193FE4F11F83584000627726 /* CustomFeedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFeedImageView.swift; sourceTree = "<group>"; };
 		19500F541F82AF76004181DA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		19C52B3D1F9E36A400E189D0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		19C52B3F1F9E5E0000E189D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19D7E6181F828683002E3455 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		19D7E61A1F829C69002E3455 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		787338263B10415B83610484 /* Pods_SocioNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocioNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,7 @@
 		193C60191F814E610003C7D0 /* SocioNet */ = {
 			isa = PBXGroup;
 			children = (
+				19C52B3C1F9E368900E189D0 /* Services */,
 				193C60341F8152540003C7D0 /* Util */,
 				193C60331F8152500003C7D0 /* Model */,
 				193C60321F81524A0003C7D0 /* View */,
@@ -128,8 +133,17 @@
 		193C60341F8152540003C7D0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				19C52B3F1F9E5E0000E189D0 /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		19C52B3C1F9E368900E189D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19C52B3D1F9E36A400E189D0 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5BD0E56A2A947A10E84F5B45 /* Pods */ = {
@@ -284,11 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D7E6191F828683002E3455 /* CustomView.swift in Sources */,
+				19C52B3E1F9E36A400E189D0 /* DataService.swift in Sources */,
 				193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */,
 				19D7E61B1F829C69002E3455 /* CustomImageView.swift in Sources */,
 				193C601D1F814E610003C7D0 /* ViewController.swift in Sources */,
 				19500F551F82AF76004181DA /* FeedViewController.swift in Sources */,
 				193C601B1F814E610003C7D0 /* AppDelegate.swift in Sources */,
+				19C52B401F9E5E0000E189D0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
