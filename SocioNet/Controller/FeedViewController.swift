@@ -19,6 +19,11 @@ class FeedViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Listener for changes in Firebase.
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            print(snapshot.value!)
+        })
     }
 
     @IBAction func logOutPressed(_ sender: Any) {
@@ -27,7 +32,7 @@ class FeedViewController: UIViewController {
         print("RAO: User ID removed from Key Chain.")
         try! Auth.auth().signOut()
         self.performSegue(withIdentifier: "SignOut", sender: nil)
-        print("RAO: Successfully logged out!")
+        print("RAO: Successfully logged out.")
     }
 }
 
