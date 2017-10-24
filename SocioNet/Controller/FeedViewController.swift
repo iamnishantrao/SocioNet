@@ -14,6 +14,8 @@ class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +24,20 @@ class FeedViewController: UIViewController {
         
         // Listener for changes in Firebase.
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-            print(snapshot.value!)
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots {
+                    print("SNAP: \(snap)")
+                    
+                    if let postDict = snap.value as? Dictionary<String, Any> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            
+            // Reload table view data.
+            self.tableView.reloadData()
         })
     }
 
@@ -44,10 +59,13 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let post = posts[indexPath.row]
+        print("RAO: \(post.caption)")
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! UITableViewCell
         return cell
