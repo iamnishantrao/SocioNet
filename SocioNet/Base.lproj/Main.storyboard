@@ -31,16 +31,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-WZ-UPT">
-                                        <rect key="frame" x="25" y="168.5" width="325" height="331"/>
+                                        <rect key="frame" x="25" y="161.5" width="325" height="344.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Hp-wJs">
-                                                <rect key="frame" x="0.0" y="0.0" width="325" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="93.5"/>
                                                 <fontDescription key="fontDescription" name="Queenata" family="Queenata" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AiG-Oq-mCr">
-                                                <rect key="frame" x="0.0" y="110" width="325" height="130"/>
+                                                <rect key="frame" x="0.0" y="123.5" width="325" height="130"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Gx-RLK">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -64,7 +64,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-tY-XSk">
-                                                <rect key="frame" x="0.0" y="270" width="325" height="1"/>
+                                                <rect key="frame" x="0.0" y="283.5" width="325" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -72,7 +72,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-nX-1Jk">
-                                                <rect key="frame" x="0.0" y="301" width="325" height="30"/>
+                                                <rect key="frame" x="0.0" y="314.5" width="325" height="30"/>
                                                 <state key="normal" title="Log in using Facebook"/>
                                                 <connections>
                                                     <action selector="facebookButtonPressed:" destination="Taw-e8-iid" eventType="touchUpInside" id="wuJ-Hc-7DG"/>
@@ -91,7 +91,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-Ph-YYW">
-                                        <rect key="frame" x="137" y="58.5" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="51.5" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ciG-Aq-IuM"/>
                                             <constraint firstAttribute="height" constant="100" id="uEE-WH-3eY"/>
@@ -152,7 +152,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-L5-dF7">
-                                        <rect key="frame" x="117.5" y="24" width="140.5" height="35"/>
+                                        <rect key="frame" x="110.5" y="18" width="154.5" height="41"/>
                                         <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -173,15 +173,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-Py-pSk">
                                         <rect key="frame" x="8" y="8" width="359" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txi-bI-Cjb">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-YT-jKZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="SI1-Zk-RIN"/>
-                                                    <constraint firstAttribute="height" constant="50" id="ZrB-x0-NHl"/>
+                                                    <constraint firstAttribute="height" constant="50" id="5f4-Nh-mCD"/>
+                                                    <constraint firstAttribute="width" constant="50" id="fGo-f6-Ghb"/>
                                                 </constraints>
-                                                <state key="normal" image="add-image"/>
-                                            </button>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Gbi-Qh-5WA" appends="YES" id="yzX-C7-h2m"/>
+                                                </connections>
+                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNf-IF-dtH">
                                                 <rect key="frame" x="60" y="0.0" width="239" height="50"/>
                                                 <constraints>
@@ -259,14 +262,14 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-LL-np8">
-                                                    <rect key="frame" x="0.0" y="50" width="375" height="300"/>
+                                                    <rect key="frame" x="0.0" y="60" width="375" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="6GT-MS-88Y"/>
                                                         <constraint firstAttribute="width" constant="375" id="e3Z-Im-42c"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-CW-2SZ">
-                                                    <rect key="frame" x="0.0" y="350" width="375" height="50"/>
+                                                    <rect key="frame" x="0.0" y="370" width="375" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9iQ-AV-GpG">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -310,7 +313,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKp-nP-CkX">
-                                                    <rect key="frame" x="8" y="400" width="359" height="91.5"/>
+                                                    <rect key="frame" x="8" y="420" width="359" height="71.5"/>
                                                     <string key="text">Post Caption:
 1. This is a test post.
 2. Created by me</string>
@@ -328,10 +331,10 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="zKp-nP-CkX" secondAttribute="trailing" id="LeO-Nk-ste"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mj4-CW-2SZ" secondAttribute="trailing" id="V6I-fd-TPq"/>
                                                 <constraint firstAttribute="trailing" secondItem="QB0-LL-np8" secondAttribute="trailing" id="Wp4-Tq-W7q"/>
-                                                <constraint firstItem="QB0-LL-np8" firstAttribute="top" secondItem="hy1-V8-QyT" secondAttribute="bottom" id="g0c-AP-LvN"/>
+                                                <constraint firstItem="QB0-LL-np8" firstAttribute="top" secondItem="hy1-V8-QyT" secondAttribute="bottom" constant="10" id="g0c-AP-LvN"/>
                                                 <constraint firstAttribute="trailing" secondItem="hy1-V8-QyT" secondAttribute="trailing" id="jze-ag-HDd"/>
                                                 <constraint firstItem="QB0-LL-np8" firstAttribute="leading" secondItem="EGt-de-Kkz" secondAttribute="leading" id="ltI-Qz-hgw"/>
-                                                <constraint firstItem="Mj4-CW-2SZ" firstAttribute="top" secondItem="QB0-LL-np8" secondAttribute="bottom" id="o5G-cL-c3H"/>
+                                                <constraint firstItem="Mj4-CW-2SZ" firstAttribute="top" secondItem="QB0-LL-np8" secondAttribute="bottom" constant="10" id="o5G-cL-c3H"/>
                                                 <constraint firstItem="zKp-nP-CkX" firstAttribute="top" secondItem="Mj4-CW-2SZ" secondAttribute="bottom" id="vD2-8s-Yub"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -362,10 +365,16 @@
                         <viewLayoutGuide key="safeArea" id="Rgk-TZ-lYB"/>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="Ya8-YT-jKZ" id="7rh-Hy-gko"/>
                         <outlet property="tableView" destination="8Ks-my-5FC" id="KAh-l8-rzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEW-ml-ifm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gbi-Qh-5WA">
+                    <connections>
+                        <action selector="addImagePressed:" destination="hi4-mB-Vw0" id="Oft-z5-dQK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2040.8" y="33.733133433283363"/>
         </scene>

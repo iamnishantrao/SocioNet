@@ -13,6 +13,8 @@ import SwiftKeychainWrapper
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImage: UIImageView!
+    var imagePicker: UIImagePickerController!
     
     var posts = [Post]()
     
@@ -21,6 +23,10 @@ class FeedViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         // Listener for changes in Firebase.
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -49,6 +55,11 @@ class FeedViewController: UIViewController {
         self.performSegue(withIdentifier: "SignOut", sender: nil)
         print("RAO: Successfully logged out.")
     }
+    
+    @IBAction func addImagePressed(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
 }
 
 // Extension for TableView methods.
@@ -79,4 +90,18 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
+}
+
+// Extension for ImageViewPicker.
+extension FeedViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("RAO: A valid image is not selected.")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
 }
