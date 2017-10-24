@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925D4C01F9F46C700F625E0 /* FeedCell.swift */; };
 		193C601B1F814E610003C7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C601A1F814E610003C7D0 /* AppDelegate.swift */; };
 		193C601D1F814E610003C7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C601C1F814E610003C7D0 /* ViewController.swift */; };
 		193C60201F814E610003C7D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193C601E1F814E610003C7D0 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1925D4C01F9F46C700F625E0 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		193C60171F814E610003C7D0 /* SocioNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193C601A1F814E610003C7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193C601C1F814E610003C7D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				19D7E6181F828683002E3455 /* CustomView.swift */,
 				19D7E61A1F829C69002E3455 /* CustomImageView.swift */,
 				193FE4F11F83584000627726 /* CustomFeedImageView.swift */,
+				1925D4C01F9F46C700F625E0 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D7E6191F828683002E3455 /* CustomView.swift in Sources */,
+				1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */,
 				19C52B3E1F9E36A400E189D0 /* DataService.swift in Sources */,
 				193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */,
 				19D7E61B1F829C69002E3455 /* CustomImageView.swift in Sources */,

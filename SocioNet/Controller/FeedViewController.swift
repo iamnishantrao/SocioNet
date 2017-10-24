@@ -63,12 +63,14 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let post = posts[indexPath.row]
-        print("RAO: \(post.caption)")
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! UITableViewCell
-        return cell
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return FeedCell()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

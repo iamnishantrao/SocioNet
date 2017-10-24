@@ -212,11 +212,12 @@
                                     <constraint firstItem="6oL-Py-pSk" firstAttribute="leading" secondItem="CBN-3M-MiN" secondAttribute="leading" constant="8" id="xBp-Qa-p4A"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ks-my-5FC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ks-my-5FC">
                                 <rect key="frame" x="0.0" y="132" width="375" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="500" id="Jis-xB-4WL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="500" id="Jis-xB-4WL" customClass="FeedCell" customModule="SocioNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jis-xB-4WL" id="EGt-de-Kkz">
@@ -257,7 +258,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="jpx-Wo-fJH"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-LL-np8" customClass="CustomFeedImageView" customModule="SocioNet" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-LL-np8">
                                                     <rect key="frame" x="0.0" y="50" width="375" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="6GT-MS-88Y"/>
@@ -334,6 +335,13 @@
                                                 <constraint firstItem="zKp-nP-CkX" firstAttribute="top" secondItem="Mj4-CW-2SZ" secondAttribute="bottom" id="vD2-8s-Yub"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="zKp-nP-CkX" id="K0p-xY-Zrf"/>
+                                            <outlet property="likesLabel" destination="08q-i6-Edc" id="8hy-1H-YUq"/>
+                                            <outlet property="postImage" destination="QB0-LL-np8" id="1Un-E7-rz8"/>
+                                            <outlet property="profileImage" destination="XI5-Db-yUI" id="zao-oe-tSs"/>
+                                            <outlet property="userNameLabel" destination="paV-0Y-NxI" id="fZG-7s-rSR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
