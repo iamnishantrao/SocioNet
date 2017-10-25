@@ -16,6 +16,8 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var addImage: UIImageView!
     var imagePicker: UIImagePickerController!
     
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    
     var posts = [Post]()
     
     override func viewDidLoad() {
@@ -30,6 +32,8 @@ class FeedViewController: UIViewController {
         
         // Listener for changes in Firebase.
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            self.posts = []
+            
             if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshots {
                     print("SNAP: \(snap)")
@@ -77,8 +81,14 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell {
-            cell.configureCell(post: post)
-            return cell
+            
+            if let image = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) {
+                cell.configureCell(post: post, image: image)
+                return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
         } else {
             return FeedCell()
         }
