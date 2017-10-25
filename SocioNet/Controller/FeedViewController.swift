@@ -14,11 +14,13 @@ class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: UIImageView!
-    var imagePicker: UIImagePickerController!
+    @IBOutlet weak var captionTextField: UITextField!
     
+    var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     var posts = [Post]()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +66,31 @@ class FeedViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func postButtonPressed(_ sender: Any) {
+        guard let caption = captionTextField.text, caption != "" else {
+            print("RAO: Caption field is empty.")
+            return
+        }
+        guard let image = addImage.image, imageSelected == true else {
+            print("RAO: Select an image to post.")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            let imageUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POSTS_IMAGES.child(imageUid).putData(imageData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("RAO: Unable to upload image to Firebase Storage.")
+                } else {
+                    print("RAO: Successfully uploaded image to Firebase Storage.")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
 }
 
 // Extension for TableView methods.
@@ -109,6 +136,7 @@ extension FeedViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
+            imageSelected = true
         } else {
             print("RAO: A valid image is not selected.")
         }

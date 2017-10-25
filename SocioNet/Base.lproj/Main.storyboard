@@ -202,6 +202,9 @@
                                                     <constraint firstAttribute="width" constant="50" id="FUX-Xq-y8Y"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postButtonPressed:" destination="hi4-mB-Vw0" eventType="touchUpInside" id="Q2G-Ih-pV0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -228,10 +231,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-V8-QyT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p7D-2j-QX2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-Db-yUI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -241,7 +244,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iamnishantrao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paV-0Y-NxI">
-                                                                    <rect key="frame" x="60" y="0.0" width="315" height="50"/>
+                                                                    <rect key="frame" x="60" y="0.0" width="119.5" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="iuc-HM-ezQ"/>
                                                                     </constraints>
@@ -262,17 +265,17 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-LL-np8">
-                                                    <rect key="frame" x="0.0" y="60" width="375" height="300"/>
+                                                    <rect key="frame" x="10" y="60" width="375" height="300"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="6GT-MS-88Y"/>
                                                         <constraint firstAttribute="width" constant="375" id="e3Z-Im-42c"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-CW-2SZ">
-                                                    <rect key="frame" x="0.0" y="370" width="375" height="50"/>
+                                                    <rect key="frame" x="0.0" y="370" width="179.5" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9iQ-AV-GpG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="znm-c8-tlQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -282,7 +285,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5F-ti-uxS">
-                                                                    <rect key="frame" x="60" y="0.0" width="235" height="50"/>
+                                                                    <rect key="frame" x="60" y="0.0" width="39.5" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="1BJ-jF-kXT"/>
                                                                     </constraints>
@@ -291,7 +294,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08q-i6-Edc">
-                                                                    <rect key="frame" x="305" y="0.0" width="70" height="50"/>
+                                                                    <rect key="frame" x="109.5" y="0.0" width="70" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="70" id="8HU-c9-RbA"/>
                                                                         <constraint firstAttribute="height" constant="50" id="MaZ-52-zML"/>
@@ -313,7 +316,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKp-nP-CkX">
-                                                    <rect key="frame" x="8" y="420" width="359" height="71.5"/>
+                                                    <rect key="frame" x="8" y="420" width="163.5" height="71.5"/>
                                                     <string key="text">Post Caption:
 1. This is a test post.
 2. Created by me</string>
@@ -330,10 +333,10 @@
                                                 <constraint firstItem="Mj4-CW-2SZ" firstAttribute="leading" secondItem="EGt-de-Kkz" secondAttribute="leading" id="GLx-9r-j5R"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="zKp-nP-CkX" secondAttribute="trailing" id="LeO-Nk-ste"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mj4-CW-2SZ" secondAttribute="trailing" id="V6I-fd-TPq"/>
-                                                <constraint firstAttribute="trailing" secondItem="QB0-LL-np8" secondAttribute="trailing" id="Wp4-Tq-W7q"/>
+                                                <constraint firstAttribute="trailing" secondItem="QB0-LL-np8" secondAttribute="trailing" constant="10" id="Wp4-Tq-W7q"/>
                                                 <constraint firstItem="QB0-LL-np8" firstAttribute="top" secondItem="hy1-V8-QyT" secondAttribute="bottom" constant="10" id="g0c-AP-LvN"/>
                                                 <constraint firstAttribute="trailing" secondItem="hy1-V8-QyT" secondAttribute="trailing" id="jze-ag-HDd"/>
-                                                <constraint firstItem="QB0-LL-np8" firstAttribute="leading" secondItem="EGt-de-Kkz" secondAttribute="leading" id="ltI-Qz-hgw"/>
+                                                <constraint firstItem="QB0-LL-np8" firstAttribute="leading" secondItem="EGt-de-Kkz" secondAttribute="leading" constant="10" id="ltI-Qz-hgw"/>
                                                 <constraint firstItem="Mj4-CW-2SZ" firstAttribute="top" secondItem="QB0-LL-np8" secondAttribute="bottom" constant="10" id="o5G-cL-c3H"/>
                                                 <constraint firstItem="zKp-nP-CkX" firstAttribute="top" secondItem="Mj4-CW-2SZ" secondAttribute="bottom" id="vD2-8s-Yub"/>
                                             </constraints>
@@ -366,6 +369,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="Ya8-YT-jKZ" id="7rh-Hy-gko"/>
+                        <outlet property="captionTextField" destination="tNf-IF-dtH" id="bqu-eW-ox3"/>
                         <outlet property="tableView" destination="8Ks-my-5FC" id="KAh-l8-rzF"/>
                     </connections>
                 </viewController>
