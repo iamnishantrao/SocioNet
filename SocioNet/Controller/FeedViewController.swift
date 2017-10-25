@@ -87,9 +87,29 @@ class FeedViewController: UIViewController {
                 } else {
                     print("RAO: Successfully uploaded image to Firebase Storage.")
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadUrl {
+                        self.postToFirebase(imageUrl: url)
+                    }
                 }
             }
         }
+    }
+    
+    func postToFirebase(imageUrl: String) {
+        let post: Dictionary<String, Any> = [
+            "caption": captionTextField.text!,
+            "imageUrl": imageUrl,
+            "likes": 0
+        ]
+        
+        let firabasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firabasePost.setValue(post)
+        
+        captionTextField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
 }
 
