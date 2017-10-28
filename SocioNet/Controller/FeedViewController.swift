@@ -131,11 +131,10 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             
             if let image = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, image: image)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
         } else {
             return FeedCell()
         }
