@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-WZ-UPT">
-                                        <rect key="frame" x="25" y="162" width="325" height="344.5"/>
+                                        <rect key="frame" x="25" y="161.5" width="325" height="344.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Hp-wJs">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="93.5"/>
@@ -94,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-Ph-YYW">
-                                        <rect key="frame" x="137" y="52" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="51.5" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ciG-Aq-IuM"/>
                                             <constraint firstAttribute="height" constant="100" id="uEE-WH-3eY"/>
@@ -393,6 +393,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Dxm-RY-IFL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXf-Hr-KXr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

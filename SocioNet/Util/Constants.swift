@@ -7,5 +7,9 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
+import Firebase
 
 let KEY_UID = "uid"
+var UID: String!
+

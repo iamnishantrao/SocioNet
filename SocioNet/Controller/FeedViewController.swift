@@ -24,7 +24,7 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -97,13 +97,14 @@ class FeedViewController: UIViewController {
     
     func postToFirebase(imageUrl: String) {
         let post: Dictionary<String, Any> = [
+            "user": UID,
             "caption": captionTextField.text!,
             "imageUrl": imageUrl,
             "likes": 0
         ]
         
-        let firabasePost = DataService.ds.REF_POSTS.childByAutoId()
-        firabasePost.setValue(post)
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
         
         captionTextField.text = ""
         imageSelected = false

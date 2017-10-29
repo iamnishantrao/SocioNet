@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user,error) in
 
                 if error == nil {
-
+                    UID = user?.uid
                     print("RAO: Successfully authenticated using email.")
                     if let user = user{
                         let userData = ["provider": user.providerID]
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 
                             print("RAO: Unable to authenticate using email for the first time.")
                         } else {
-
+                            UID = user?.uid
                             print("RAO: Successfully authenticated using email for the first time.")
                             if let user = user {
                                 let userData = ["provider": user.providerID]
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
                 
                 print("RAO: Unable to authenticate for Facebook using Firebase - \(String(describing: error))")
             } else {
-                
+                UID = user?.uid
                 print("RAO: Successfully authenticated using Firebase for Facebook.")
                 
                 // To store UID in Keychain.
