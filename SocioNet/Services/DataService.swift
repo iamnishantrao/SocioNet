@@ -26,7 +26,7 @@ class DataService {
     
     // Storage references.
     private var _REF_POSTS_IMAGES = STORAGE_BASE.child("post-pics")
-    private var _REF_USER_IMAGES = STORAGE_BASE.child("user-images")
+    private var _REF_USER_IMAGES = STORAGE_BASE.child("profile-image")
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE

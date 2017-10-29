@@ -12,8 +12,8 @@ import Firebase
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImage: CustomImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var about: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
     
     var userRef: DatabaseReference!
     
@@ -33,10 +33,10 @@ class ProfileViewController: UIViewController {
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let value = snapshot.value as? Dictionary<String, Any> {
                 if let name = value["name"] as? String {
-                    self.name.text = name
+                    self.nameLabel.text = name
                 }
                 if let about = value["about"] as? String {
-                    self.about.text = about
+                    self.aboutLabel.text = about
                 }
                 if let profileImageUrl = value["profileImageUrl"] as? String {
                     let ref = Storage.storage().reference(forURL: profileImageUrl)

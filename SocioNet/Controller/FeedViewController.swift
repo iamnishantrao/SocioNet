@@ -83,9 +83,9 @@ class FeedViewController: UIViewController {
             
             DataService.ds.REF_POSTS_IMAGES.child(imageUid).putData(imageData, metadata: metadata) { (metadata, error) in
                 if error != nil {
-                    print("RAO: Unable to upload image to Firebase Storage.")
+                    print("RAO: Unable to upload POST image to Firebase Storage.")
                 } else {
-                    print("RAO: Successfully uploaded image to Firebase Storage.")
+                    print("RAO: Successfully uploaded POST image to Firebase Storage.")
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
                     if let url = downloadUrl {
                         self.postToFirebase(imageUrl: url)
@@ -95,6 +95,7 @@ class FeedViewController: UIViewController {
         }
     }
     
+    // Post new post data to Firebase Database.
     func postToFirebase(imageUrl: String) {
         let post: Dictionary<String, Any> = [
             "user": UID,

@@ -25,7 +25,7 @@ class FeedCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(likeButtonPressed))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped))
         tap.numberOfTapsRequired = 1
         likeImage.addGestureRecognizer(tap)
         likeImage.isUserInteractionEnabled = true
@@ -67,7 +67,7 @@ class FeedCell: UITableViewCell {
         })
     }
     
-    @objc func likeButtonPressed(sender: UITapGestureRecognizer) {
+    @objc func likeButtonTapped(sender: UITapGestureRecognizer) {
         likeRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
                 self.likeImage.image = UIImage(named: "filled-heart")

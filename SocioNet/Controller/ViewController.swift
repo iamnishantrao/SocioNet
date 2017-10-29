@@ -51,21 +51,7 @@ class ViewController: UIViewController {
                     
                 } else {
 
-                    // Create new account if user is not registered already.
-                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-
-                        if error != nil {
-
-                            print("RAO: Unable to authenticate using email for the first time.")
-                        } else {
-                            UID = user?.uid
-                            print("RAO: Successfully authenticated using email for the first time.")
-                            if let user = user {
-                                let userData = ["provider": user.providerID]
-                                self.keyChainSignIn(uid: user.uid, userData: userData)
-                            }
-                        }
-                    })
+                    print("RAO: Unable to authenticate using email.")
                 }
             })
         }
@@ -114,6 +100,12 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    // SignUp for new user.
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "NewUserViewController", sender: nil)
+    }
+    
     
     // Function to add UID to Keychain.
     func keyChainSignIn(uid: String, userData: Dictionary<String, String>) {
