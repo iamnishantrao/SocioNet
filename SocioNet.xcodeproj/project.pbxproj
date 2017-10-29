@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925D4C01F9F46C700F625E0 /* FeedCell.swift */; };
+		1933BF801FA5914C00B002EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1933BF7F1FA5914C00B002EE /* ProfileViewController.swift */; };
 		193C601B1F814E610003C7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C601A1F814E610003C7D0 /* AppDelegate.swift */; };
 		193C601D1F814E610003C7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C601C1F814E610003C7D0 /* ViewController.swift */; };
 		193C60201F814E610003C7D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193C601E1F814E610003C7D0 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1925D4C01F9F46C700F625E0 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		1933BF7F1FA5914C00B002EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		193C60171F814E610003C7D0 /* SocioNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193C601A1F814E610003C7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193C601C1F814E610003C7D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				193C601C1F814E610003C7D0 /* ViewController.swift */,
 				19500F541F82AF76004181DA /* FeedViewController.swift */,
+				1933BF7F1FA5914C00B002EE /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */,
 				19D7E61B1F829C69002E3455 /* CustomImageView.swift in Sources */,
 				193C601D1F814E610003C7D0 /* ViewController.swift in Sources */,
+				1933BF801FA5914C00B002EE /* ProfileViewController.swift in Sources */,
 				19500F551F82AF76004181DA /* FeedViewController.swift in Sources */,
 				19CAA2D51F9F2F7D00539A1F /* Post.swift in Sources */,
 				193C601B1F814E610003C7D0 /* AppDelegate.swift in Sources */,

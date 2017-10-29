@@ -11,10 +11,9 @@ import UIKit
 class CustomImageView: UIImageView {
 
     override func awakeFromNib() {
-    
         super.awakeFromNib()
         
-        layer.cornerRadius = 25.0
+        layer.cornerRadius = self.frame.width / 2
+        clipsToBounds = true
     }
-
 }
