@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1919192A1FA72C33002E5053 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191919291FA72C33002E5053 /* PostCell.swift */; };
 		1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925D4C01F9F46C700F625E0 /* FeedCell.swift */; };
 		1933BF801FA5914C00B002EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1933BF7F1FA5914C00B002EE /* ProfileViewController.swift */; };
 		193C601B1F814E610003C7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C601A1F814E610003C7D0 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191919291FA72C33002E5053 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		1925D4C01F9F46C700F625E0 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		1933BF7F1FA5914C00B002EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		193C60171F814E610003C7D0 /* SocioNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				19D7E61A1F829C69002E3455 /* CustomImageView.swift */,
 				193FE4F11F83584000627726 /* CustomFeedImageView.swift */,
 				1925D4C01F9F46C700F625E0 /* FeedCell.swift */,
+				191919291FA72C33002E5053 /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				19D7E6191F828683002E3455 /* CustomView.swift in Sources */,
 				1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */,
+				1919192A1FA72C33002E5053 /* PostCell.swift in Sources */,
 				19C52B3E1F9E36A400E189D0 /* DataService.swift in Sources */,
 				193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */,
 				19D7E61B1F829C69002E3455 /* CustomImageView.swift in Sources */,

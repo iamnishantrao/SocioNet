@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-WZ-UPT">
-                                        <rect key="frame" x="25" y="162" width="325" height="344.5"/>
+                                        <rect key="frame" x="25" y="161.5" width="325" height="344.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Hp-wJs">
                                                 <rect key="frame" x="0.0" y="0.0" width="325" height="93.5"/>
@@ -94,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-Ph-YYW">
-                                        <rect key="frame" x="137" y="52" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="51.5" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ciG-Aq-IuM"/>
                                             <constraint firstAttribute="height" constant="100" id="uEE-WH-3eY"/>
@@ -400,7 +400,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="N2j-0H-YWB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-uC-T2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Dxm-RY-IFL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXf-Hr-KXr">
@@ -413,6 +412,7 @@
                         <segue destination="Haa-jK-5Ev" kind="relationship" relationship="viewControllers" id="n8w-KX-oph"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-uC-T2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2154" y="-152"/>
         </scene>
@@ -572,6 +572,40 @@
                                     <constraint firstAttribute="trailing" secondItem="PbZ-Jz-xjt" secondAttribute="trailing" id="NDO-ZK-EDL"/>
                                 </constraints>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-r5-x37">
+                                <rect key="frame" x="0.0" y="204" width="375" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W4l-l1-HSS">
+                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="xjN-fT-3rA" customClass="PostCell" customModule="SocioNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-bb-DGE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="f8I-bb-DGE" secondAttribute="trailing" id="8UZ-7q-Dgd"/>
+                                            <constraint firstAttribute="bottom" secondItem="f8I-bb-DGE" secondAttribute="bottom" id="DES-kL-dpg"/>
+                                            <constraint firstItem="f8I-bb-DGE" firstAttribute="top" secondItem="xjN-fT-3rA" secondAttribute="top" id="cK8-HW-zhx"/>
+                                            <constraint firstItem="f8I-bb-DGE" firstAttribute="leading" secondItem="xjN-fT-3rA" secondAttribute="leading" id="eMh-si-CDE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="postImage" destination="f8I-bb-DGE" id="HvT-4I-DOn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -579,7 +613,11 @@
                             <constraint firstItem="nqX-ZT-lbZ" firstAttribute="trailing" secondItem="XuT-9k-SDd" secondAttribute="trailing" constant="20" id="DPc-tT-Y0Q"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="trailing" secondItem="nqX-ZT-lbZ" secondAttribute="trailing" id="FNb-fY-XEj"/>
                             <constraint firstItem="XuT-9k-SDd" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" constant="20" id="RSc-Tr-CPL"/>
+                            <constraint firstItem="nqX-ZT-lbZ" firstAttribute="bottom" secondItem="W4n-r5-x37" secondAttribute="bottom" id="TfO-A9-6rM"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="top" secondItem="799-5z-QLz" secondAttribute="top" id="UtY-3h-hQx"/>
+                            <constraint firstItem="W4n-r5-x37" firstAttribute="top" secondItem="XuT-9k-SDd" secondAttribute="bottom" constant="20" id="VJQ-zK-z6O"/>
+                            <constraint firstItem="nqX-ZT-lbZ" firstAttribute="trailing" secondItem="W4n-r5-x37" secondAttribute="trailing" id="bNR-gV-23c"/>
+                            <constraint firstItem="W4n-r5-x37" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" id="fiB-Y4-S6F"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" id="sGU-9B-SOv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqX-ZT-lbZ"/>
@@ -587,6 +625,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="businessman" id="epn-4m-ffs"/>
                     <connections>
                         <outlet property="aboutLabel" destination="PbZ-Jz-xjt" id="a9K-r6-bY9"/>
+                        <outlet property="collectionView" destination="W4n-r5-x37" id="Miy-hj-2tP"/>
                         <outlet property="nameLabel" destination="itV-zP-5uz" id="Qr3-wr-g2F"/>
                         <outlet property="profileImage" destination="Kx8-dw-R7e" id="lul-ns-sS2"/>
                     </connections>
