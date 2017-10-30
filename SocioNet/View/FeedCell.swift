@@ -39,6 +39,33 @@ class FeedCell: UITableViewCell {
         self.captionLabel.text = post.caption
         self.likesLabel.text = "\(post.likes)"
         
+        // MARK: To set username and profile image for post.
+        let userId = post.userId
+        let userRef = DataService.ds.REF_USERS.child(userId)
+        userRef.observeSingleEvent (of: .value, with: { (snapshot) in
+            if let value = snapshot.value as? Dictionary<String, Any> {
+                if let username = value["username"] as? String {
+                    self.userNameLabel.text = username
+                }
+                if let profileImageUrl = value["profileImageUrl"] as? String {
+                    let profileImageUrl = profileImageUrl
+                    let ref = Storage.storage().reference(forURL: profileImageUrl)
+                    ref.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                        if error != nil {
+                            print("RAO: Unable to download PROFILE IMAGE from Firebase.")
+                        } else {
+                            print("RAO: PROFILE IMAGE downloaded from Firebase.")
+                            if let imageData = data {
+                                if let image = UIImage(data: imageData) {
+                                    self.profileImage.image =  image
+                                }
+                            }
+                        }
+                    })
+                }
+            }
+        })
+        
         if image != nil {
             self.postImage.image = image
         } else {

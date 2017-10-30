@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
-            
+        if let id = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            UID = id
+            print("TEST: \(id)")
             performSegue(withIdentifier: "FeedViewController", sender: nil)
         }
     }

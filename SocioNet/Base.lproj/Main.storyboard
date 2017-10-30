@@ -142,9 +142,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1h-k2-lHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.8" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1204" y="-505"/>
         </scene>
-        <!--Item-->
+        <!--Feed-->
         <scene sceneID="WLR-YC-oGD">
             <objects>
                 <viewController id="hi4-mB-Vw0" customClass="FeedViewController" customModule="SocioNet" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +232,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ks-my-5FC">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -249,7 +249,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p7D-2j-QX2">
                                                             <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-Db-yUI">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-Db-yUI" customClass="CustomImageView" customModule="SocioNet" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="G7W-QM-CGv"/>
@@ -360,7 +360,7 @@
                                             <outlet property="likesLabel" destination="08q-i6-Edc" id="8hy-1H-YUq"/>
                                             <outlet property="postImage" destination="QB0-LL-np8" id="1Un-E7-rz8"/>
                                             <outlet property="profileImage" destination="XI5-Db-yUI" id="zao-oe-tSs"/>
-                                            <outlet property="userNameLabel" destination="paV-0Y-NxI" id="fZG-7s-rSR"/>
+                                            <outlet property="userNameLabel" destination="paV-0Y-NxI" id="tts-IR-eJn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -381,7 +381,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rgk-TZ-lYB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5oc-7d-O9v"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="instagram" id="5oc-7d-O9v"/>
                     <connections>
                         <outlet property="addImage" destination="Ya8-YT-jKZ" id="7rh-Hy-gko"/>
                         <outlet property="captionTextField" destination="tNf-IF-dtH" id="bqu-eW-ox3"/>
@@ -395,11 +395,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3214" y="-244"/>
+            <point key="canvasLocation" x="3044" y="-505"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N2j-0H-YWB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-uC-T2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Dxm-RY-IFL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXf-Hr-KXr">
@@ -412,9 +413,8 @@
                         <segue destination="Haa-jK-5Ev" kind="relationship" relationship="viewControllers" id="n8w-KX-oph"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-uC-T2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1953" y="-244"/>
+            <point key="canvasLocation" x="2154" y="-152"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="hNX-kE-oi6">
@@ -441,7 +441,7 @@
                                     <constraint firstAttribute="bottom" secondItem="bFA-bP-r3q" secondAttribute="bottom" constant="5" id="uuK-pC-6Jm"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="MA9-aV-cbM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="MA9-aV-cbM" customClass="CustomImageView" customModule="SocioNet" customModuleProvider="target">
                                 <rect key="frame" x="137" y="114" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CDq-XJ-U49"/>
@@ -516,14 +516,14 @@
                         <outlet property="passwordTextField" destination="94W-j9-ajq" id="VPh-Be-e3A"/>
                         <outlet property="profileImage" destination="MA9-aV-cbM" id="0WY-Mq-2dC"/>
                         <outlet property="usernameTextField" destination="fOA-eh-vmG" id="gdQ-3U-2HB"/>
-                        <segue destination="hi4-mB-Vw0" kind="show" identifier="NewUserFeedViewController" id="H99-fx-zN0"/>
+                        <segue destination="Dxm-RY-IFL" kind="show" identifier="NewUserFeedViewController" id="CYs-Bd-Irq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dce-vh-ySW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.8" y="470.91454272863569"/>
+            <point key="canvasLocation" x="1204" y="239"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="u2h-RU-FB3">
             <objects>
                 <viewController id="Haa-jK-5Ev" customClass="ProfileViewController" customModule="SocioNet" customModuleProvider="target" sceneMemberID="viewController">
@@ -584,7 +584,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqX-ZT-lbZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="epn-4m-ffs"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="businessman" id="epn-4m-ffs"/>
                     <connections>
                         <outlet property="aboutLabel" destination="PbZ-Jz-xjt" id="a9K-r6-bY9"/>
                         <outlet property="nameLabel" destination="itV-zP-5uz" id="Qr3-wr-g2F"/>
@@ -593,18 +593,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPz-VB-tYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="471"/>
+            <point key="canvasLocation" x="3044" y="239"/>
         </scene>
     </scenes>
     <resources>
         <image name="add-image" width="88" height="88"/>
         <image name="add-post" width="88" height="88"/>
+        <image name="businessman" width="30" height="30"/>
         <image name="empty-heart" width="70" height="70"/>
+        <image name="instagram" width="30" height="30"/>
         <image name="plus" width="128" height="128"/>
-        <image name="profile_pic" width="972" height="972"/>
         <image name="social-network" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H99-fx-zN0"/>
+        <segue reference="CYs-Bd-Irq"/>
     </inferredMetricsTieBreakers>
 </document>

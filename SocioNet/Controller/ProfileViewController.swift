@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userRef = DataService.ds.REF_CURRENT_USER
+        userRef = DataService.ds.REF_USERS.child(UID)
         congifureUserProfile(userRef: userRef)
     }
 
@@ -29,6 +29,7 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Configure user profiel page.
     func congifureUserProfile(userRef: DatabaseReference) {
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let value = snapshot.value as? Dictionary<String, Any> {

@@ -11,6 +11,7 @@ import Firebase
 
 class Post {
     
+    private var _userId: String!
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
@@ -33,6 +34,10 @@ class Post {
         return _postKey
     }
     
+    var userId: String {
+        return _userId
+    }
+    
     init(caption: String, imageUrl: String, likes: Int) {
         self._caption = caption
         self._imageUrl = imageUrl
@@ -53,6 +58,10 @@ class Post {
         
         if let likes = postData["likes"] as? Int {
             self._likes = likes
+        }
+        
+        if let userId = postData["user"] as? String {
+            self._userId = userId
         }
         
         // Reference to current post.
