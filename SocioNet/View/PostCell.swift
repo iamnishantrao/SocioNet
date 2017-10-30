@@ -11,8 +11,4 @@ import UIKit
 class PostCell: UICollectionViewCell {
     
     @IBOutlet weak var postImage: UIImageView!
-    
-    func configureCell(image: UIImage) {
-        self.postImage.image = image
-    }
 }

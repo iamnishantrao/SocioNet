@@ -23,12 +23,22 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        postImages = []
         
         userRef = DataService.ds.REF_USERS.child(UID)
         congifureUserProfile(userRef: userRef)
         
         postRef = DataService.ds.REF_POSTS
         configureUserPosts(postRef: postRef)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +92,7 @@ class ProfileViewController: UIViewController {
                                     if let imageData = data {
                                         if let image = UIImage(data: imageData) {
                                             self.postImages.append(image)
+                                            print("NUM: \(self.postImages.count)")
                                         }
                                     }
                                 }
@@ -97,6 +108,7 @@ class ProfileViewController: UIViewController {
 
 // Extension for UICollectionView methods.
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -107,9 +119,10 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? PostCell {
-            cell.configureCell(image: postImages[indexPath.row])
-        }
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! PostCell
+        cell.postImage.image = postImages[indexPath.row]
+        print("RAO: Post images set to cell.")
+
+        return cell
     }
 }

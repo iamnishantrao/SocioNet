@@ -34,16 +34,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-WZ-UPT">
-                                        <rect key="frame" x="25" y="161.5" width="325" height="344.5"/>
+                                        <rect key="frame" x="25" y="168" width="325" height="331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Hp-wJs">
-                                                <rect key="frame" x="0.0" y="0.0" width="325" height="93.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="80"/>
                                                 <fontDescription key="fontDescription" name="Queenata" family="Queenata" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AiG-Oq-mCr">
-                                                <rect key="frame" x="0.0" y="123.5" width="325" height="130"/>
+                                                <rect key="frame" x="0.0" y="110" width="325" height="130"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Gx-RLK">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -67,7 +67,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-tY-XSk">
-                                                <rect key="frame" x="0.0" y="283.5" width="325" height="1"/>
+                                                <rect key="frame" x="0.0" y="270" width="325" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-nX-1Jk">
-                                                <rect key="frame" x="0.0" y="314.5" width="325" height="30"/>
+                                                <rect key="frame" x="0.0" y="301" width="325" height="30"/>
                                                 <state key="normal" title="Log in using Facebook"/>
                                                 <connections>
                                                     <action selector="facebookButtonPressed:" destination="Taw-e8-iid" eventType="touchUpInside" id="wuJ-Hc-7DG"/>
@@ -94,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-Ph-YYW">
-                                        <rect key="frame" x="137" y="51.5" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="58" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ciG-Aq-IuM"/>
                                             <constraint firstAttribute="height" constant="100" id="uEE-WH-3eY"/>
@@ -165,7 +165,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-L5-dF7">
-                                        <rect key="frame" x="110.5" y="18" width="154.5" height="41"/>
+                                        <rect key="frame" x="117.5" y="24" width="140.5" height="35"/>
                                         <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -428,7 +428,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-bP-r3q">
-                                        <rect key="frame" x="124.5" y="18" width="126" height="41"/>
+                                        <rect key="frame" x="131.5" y="24" width="112" height="35"/>
                                         <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -549,7 +549,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XuT-9k-SDd">
-                                <rect key="frame" x="20" y="84" width="375" height="100"/>
+                                <rect key="frame" x="20" y="104" width="375" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kx8-dw-R7e" customClass="CustomImageView" customModule="SocioNet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -573,24 +573,24 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-r5-x37">
-                                <rect key="frame" x="0.0" y="204" width="375" height="414"/>
+                                <rect key="frame" x="0.0" y="284" width="375" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W4l-l1-HSS">
-                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="xjN-fT-3rA" customClass="PostCell" customModule="SocioNet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-bb-DGE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -609,13 +609,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XuT-9k-SDd" firstAttribute="top" secondItem="PHw-qr-SGc" secondAttribute="bottom" constant="20" id="AcR-rJ-EwN"/>
+                            <constraint firstItem="XuT-9k-SDd" firstAttribute="top" secondItem="PHw-qr-SGc" secondAttribute="bottom" constant="40" id="AcR-rJ-EwN"/>
                             <constraint firstItem="nqX-ZT-lbZ" firstAttribute="trailing" secondItem="XuT-9k-SDd" secondAttribute="trailing" constant="20" id="DPc-tT-Y0Q"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="trailing" secondItem="nqX-ZT-lbZ" secondAttribute="trailing" id="FNb-fY-XEj"/>
                             <constraint firstItem="XuT-9k-SDd" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" constant="20" id="RSc-Tr-CPL"/>
                             <constraint firstItem="nqX-ZT-lbZ" firstAttribute="bottom" secondItem="W4n-r5-x37" secondAttribute="bottom" id="TfO-A9-6rM"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="top" secondItem="799-5z-QLz" secondAttribute="top" id="UtY-3h-hQx"/>
-                            <constraint firstItem="W4n-r5-x37" firstAttribute="top" secondItem="XuT-9k-SDd" secondAttribute="bottom" constant="20" id="VJQ-zK-z6O"/>
+                            <constraint firstItem="W4n-r5-x37" firstAttribute="top" secondItem="XuT-9k-SDd" secondAttribute="bottom" constant="80" id="VJQ-zK-z6O"/>
                             <constraint firstItem="nqX-ZT-lbZ" firstAttribute="trailing" secondItem="W4n-r5-x37" secondAttribute="trailing" id="bNR-gV-23c"/>
                             <constraint firstItem="W4n-r5-x37" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" id="fiB-Y4-S6F"/>
                             <constraint firstItem="PHw-qr-SGc" firstAttribute="leading" secondItem="nqX-ZT-lbZ" secondAttribute="leading" id="sGU-9B-SOv"/>
