@@ -20,6 +20,7 @@
 		193FE4F21F83584000627726 /* CustomFeedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193FE4F11F83584000627726 /* CustomFeedImageView.swift */; };
 		19500F551F82AF76004181DA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19500F541F82AF76004181DA /* FeedViewController.swift */; };
 		19B11B9D1FA6315D0017E43C /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B11B9C1FA6315D0017E43C /* NewUserViewController.swift */; };
+		19B595891FAA05D200A3283F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B595881FAA05D200A3283F /* Reachability.swift */; };
 		19C52B3E1F9E36A400E189D0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C52B3D1F9E36A400E189D0 /* DataService.swift */; };
 		19C52B401F9E5E0000E189D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C52B3F1F9E5E0000E189D0 /* Constants.swift */; };
 		19CAA2D51F9F2F7D00539A1F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAA2D41F9F2F7D00539A1F /* Post.swift */; };
@@ -46,6 +47,7 @@
 		193FE4F11F83584000627726 /* CustomFeedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFeedImageView.swift; sourceTree = "<group>"; };
 		19500F541F82AF76004181DA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		19B11B9C1FA6315D0017E43C /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		19B595881FAA05D200A3283F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		19C52B3D1F9E36A400E189D0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		19C52B3F1F9E5E0000E189D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19CAA2D41F9F2F7D00539A1F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				19C52B3D1F9E36A400E189D0 /* DataService.swift */,
+				19B595881FAA05D200A3283F /* Reachability.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B595891FAA05D200A3283F /* Reachability.swift in Sources */,
 				19D7E6191F828683002E3455 /* CustomView.swift in Sources */,
 				1925D4C11F9F46C700F625E0 /* FeedCell.swift in Sources */,
 				1919192A1FA72C33002E5053 /* PostCell.swift in Sources */,

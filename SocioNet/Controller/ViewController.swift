@@ -13,6 +13,8 @@ import FBSDKLoginKit
 import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
+    
+    let reachability = Reachability()!
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,11 +25,46 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let id = KeychainWrapper.standard.string(forKey: KEY_UID) {
-            UID = id
-            print("TEST: \(id)")
-            performSegue(withIdentifier: "FeedViewController", sender: nil)
+        
+        // For making sure internet reachibility.
+        reachability.whenReachable = { reachability in
+            if reachability.connection == .wifi {
+                print("Reachable via WiFi")
+                if let id = KeychainWrapper.standard.string(forKey: KEY_UID) {
+                    UID = id
+                    print("TEST: \(id)")
+                    self.performSegue(withIdentifier: "FeedViewController", sender: nil)
+                }
+            } else {
+                print("Reachable via Cellular")
+                if let id = KeychainWrapper.standard.string(forKey: KEY_UID) {
+                    UID = id
+                    print("TEST: \(id)")
+                    self.performSegue(withIdentifier: "FeedViewController", sender: nil)
+                }
+            }
         }
+        reachability.whenUnreachable = { _ in
+            print("Not reachable")
+            let alertController = UIAlertController(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+        
+//        if let id = KeychainWrapper.standard.string(forKey: KEY_UID) {
+//            UID = id
+//            print("TEST: \(id)")
+//            performSegue(withIdentifier: "FeedViewController", sender: nil)
+//        }
     }
 
     override func didReceiveMemoryWarning() {
