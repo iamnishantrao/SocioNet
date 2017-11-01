@@ -34,16 +34,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-WZ-UPT">
-                                        <rect key="frame" x="25" y="168" width="325" height="331"/>
+                                        <rect key="frame" x="25" y="162" width="325" height="344.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-Hp-wJs">
-                                                <rect key="frame" x="0.0" y="0.0" width="325" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="93.5"/>
                                                 <fontDescription key="fontDescription" name="Queenata" family="Queenata" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AiG-Oq-mCr">
-                                                <rect key="frame" x="0.0" y="110" width="325" height="130"/>
+                                                <rect key="frame" x="0.0" y="123.5" width="325" height="130"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-Gx-RLK">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -67,7 +67,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-tY-XSk">
-                                                <rect key="frame" x="0.0" y="270" width="325" height="1"/>
+                                                <rect key="frame" x="0.0" y="283.5" width="325" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -75,7 +75,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-nX-1Jk">
-                                                <rect key="frame" x="0.0" y="301" width="325" height="30"/>
+                                                <rect key="frame" x="0.0" y="314.5" width="325" height="30"/>
                                                 <state key="normal" title="Log in using Facebook"/>
                                                 <connections>
                                                     <action selector="facebookButtonPressed:" destination="Taw-e8-iid" eventType="touchUpInside" id="wuJ-Hc-7DG"/>
@@ -94,7 +94,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social-network" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-Ph-YYW">
-                                        <rect key="frame" x="137" y="58" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="52" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ciG-Aq-IuM"/>
                                             <constraint firstAttribute="height" constant="100" id="uEE-WH-3eY"/>
@@ -165,7 +165,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socio Net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-L5-dF7">
-                                        <rect key="frame" x="117.5" y="24" width="140.5" height="35"/>
+                                        <rect key="frame" x="110.5" y="18" width="154.5" height="41"/>
                                         <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -428,14 +428,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-bP-r3q">
-                                        <rect key="frame" x="131.5" y="24" width="112" height="35"/>
+                                        <rect key="frame" x="124.5" y="18" width="126" height="41"/>
                                         <fontDescription key="fontDescription" name="Trench-Thin" family="Trench" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-vd-iID">
+                                        <rect key="frame" x="305" y="27" width="50" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="K0V-Yr-0ME" eventType="touchUpInside" id="EtP-lh-5U8"/>
+                                            <action selector="logOutPressed:" destination="hi4-mB-Vw0" eventType="touchUpInside" id="YPz-Gi-h1s"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3zT-vd-iID" secondAttribute="trailing" constant="20" id="MbR-fI-yuP"/>
+                                    <constraint firstAttribute="bottom" secondItem="3zT-vd-iID" secondAttribute="bottom" constant="5" id="PKN-80-hfU"/>
                                     <constraint firstAttribute="height" constant="64" id="ReD-GR-hg9"/>
                                     <constraint firstItem="bFA-bP-r3q" firstAttribute="centerX" secondItem="2Hb-Nl-7dc" secondAttribute="centerX" id="cTv-Qh-M3L"/>
                                     <constraint firstAttribute="bottom" secondItem="bFA-bP-r3q" secondAttribute="bottom" constant="5" id="uuK-pC-6Jm"/>
@@ -517,6 +528,7 @@
                         <outlet property="profileImage" destination="MA9-aV-cbM" id="0WY-Mq-2dC"/>
                         <outlet property="usernameTextField" destination="fOA-eh-vmG" id="gdQ-3U-2HB"/>
                         <segue destination="Dxm-RY-IFL" kind="show" identifier="NewUserFeedViewController" id="CYs-Bd-Irq"/>
+                        <segue destination="Taw-e8-iid" kind="show" identifier="Cancel" id="wAK-D8-yin"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dce-vh-ySW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -646,5 +658,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CYs-Bd-Irq"/>
+        <segue reference="wAK-D8-yin"/>
     </inferredMetricsTieBreakers>
 </document>

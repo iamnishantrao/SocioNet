@@ -42,6 +42,10 @@ class NewUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "Cancel", sender: nil)
+    }
+    
     @IBAction func signUpButtonPressed(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
