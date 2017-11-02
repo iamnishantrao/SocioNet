@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Taw-e8-iid">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Taw-e8-iid">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,7 +76,8 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-nX-1Jk">
                                                 <rect key="frame" x="0.0" y="314.5" width="325" height="30"/>
-                                                <state key="normal" title="Log in using Facebook"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Login Using Facebook"/>
                                                 <connections>
                                                     <action selector="facebookButtonPressed:" destination="Taw-e8-iid" eventType="touchUpInside" id="wuJ-Hc-7DG"/>
                                                 </connections>
@@ -244,10 +245,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-V8-QyT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185.5" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p7D-2j-QX2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="50"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XI5-Db-yUI" customClass="CustomImageView" customModule="SocioNet" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -257,7 +258,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iamnishantrao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paV-0Y-NxI">
-                                                                    <rect key="frame" x="60" y="0.0" width="119.5" height="50"/>
+                                                                    <rect key="frame" x="60" y="0.0" width="125.5" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="iuc-HM-ezQ"/>
                                                                     </constraints>
@@ -285,10 +286,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-CW-2SZ">
-                                                    <rect key="frame" x="0.0" y="370" width="179.5" height="50"/>
+                                                    <rect key="frame" x="0.0" y="370" width="185.5" height="50"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9iQ-AV-GpG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="50"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="znm-c8-tlQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -298,7 +299,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5F-ti-uxS">
-                                                                    <rect key="frame" x="60" y="0.0" width="39.5" height="50"/>
+                                                                    <rect key="frame" x="60" y="0.0" width="45.5" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="1BJ-jF-kXT"/>
                                                                     </constraints>
@@ -307,7 +308,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08q-i6-Edc">
-                                                                    <rect key="frame" x="109.5" y="0.0" width="70" height="50"/>
+                                                                    <rect key="frame" x="115.5" y="0.0" width="70" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="70" id="8HU-c9-RbA"/>
                                                                         <constraint firstAttribute="height" constant="50" id="MaZ-52-zML"/>
@@ -329,7 +330,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKp-nP-CkX">
-                                                    <rect key="frame" x="8" y="420" width="163.5" height="71.5"/>
+                                                    <rect key="frame" x="15" y="420" width="155.5" height="69"/>
                                                     <string key="text">Post Caption:
 1. This is a test post.
 2. Created by me</string>
@@ -657,7 +658,7 @@
         <image name="social-network" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CYs-Bd-Irq"/>
+        <segue reference="gze-PC-NVQ"/>
         <segue reference="wAK-D8-yin"/>
     </inferredMetricsTieBreakers>
 </document>
